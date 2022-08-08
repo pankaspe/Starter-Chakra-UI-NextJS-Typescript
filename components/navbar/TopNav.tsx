@@ -21,10 +21,8 @@ import {
    DrawerCloseButton,
  } from '@chakra-ui/react';
 
-export interface TopNav {}
-
 // @ start the main TopNav component
-const TopNav: React.FC<TopNav> = () => {
+const TopNav: React.FC = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef =  React.useRef<HTMLButtonElement>(null);
