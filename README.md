@@ -2,3 +2,6 @@ This is an [Next.js](https://nextjs.org/) alpha project bootstrapped with [`crea
 
 ## added function
 - navbar called `TopNav` responsive with `Drawer` component
+- switch light/dark mode button based on `localStorage()`
+
+![Screenshot](screenshot.png)

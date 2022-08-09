@@ -1,5 +1,6 @@
 import React from 'react';
-import SwitchColor from '../Toggle';
+import SwitchColor from '../SwitchColorButton';
+import websiteConfig from '../../lib/config/website'
 
 import { HamburgerIcon } from '@chakra-ui/icons';
 
@@ -71,7 +72,7 @@ const TopNav: React.FC = () => {
             color={useColorModeValue('white', 'white')}
             fontWeight={600}
           >
-            Logo
+            { websiteConfig.meta.logo ? "logoimage" : websiteConfig.meta.title }
           </Text>
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
