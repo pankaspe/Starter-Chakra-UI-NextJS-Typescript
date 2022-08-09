@@ -1,6 +1,7 @@
 import React from 'react';
 import SwitchColor from '../SwitchColorButton';
-import websiteConfig from '../../lib/config/website'
+import websiteConfig from '../../lib/config/website';
+import NextLink from "next/link"
 
 import { HamburgerIcon } from '@chakra-ui/icons';
 
@@ -121,16 +122,17 @@ const DesktopNav = () => {
     <Stack direction={'row'} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
-          <Link
-            p={2}
-            href={navItem.href ?? '#'}
-            fontSize={'md'}
-            fontWeight={400}
-            color={useColorModeValue('gray.50', 'green.50')}
-            _hover={{ textDecoration: 'underline' }}
-          >
-            {navItem.label}
-          </Link>
+          <NextLink href={navItem.href ?? '#'} passHref>
+            <Link
+              p={2}
+              fontSize={'md'}
+              fontWeight={400}
+              color={useColorModeValue('gray.50', 'green.50')}
+              _hover={{ textDecoration: 'underline' }}
+            >
+              {navItem.label}
+            </Link>
+          </NextLink>
         </Box>
       ))}
     </Stack>
@@ -155,22 +157,23 @@ const MobileNav = () => {
 const MobileNavItem = ({ label, href }: NavItem) => {
   return (
     <Stack spacing={4}>
-      <Box
-        py={6}
-        as={Link}
-        href={href ?? '#'}
-        justify={'space-between'}
-        align={'center'}
-        _hover={{ textDecoration: 'none' }}
-      >
-        <Text
-          fontSize={"lg"}
-          fontWeight={600}
-          color={useColorModeValue('gray.50', 'green.50')}
+      <NextLink href={href ?? '#'} passHref>
+        <Box
+          py={6}
+          as={Link}
+          justify={'space-between'}
+          align={'center'}
+          _hover={{ textDecoration: 'none' }}
         >
-          {label}
-        </Text>
-      </Box>
+          <Text
+            fontSize={"lg"}
+            fontWeight={600}
+            color={useColorModeValue('gray.50', 'green.50')}
+          >
+            {label}
+          </Text>
+        </Box>
+      </NextLink>
  
     </Stack>
   );
@@ -179,8 +182,6 @@ const MobileNavItem = ({ label, href }: NavItem) => {
 // @ define interface for nav component
 interface NavItem {
   label: string;
-  subLabel?: string;
-  children?: Array<NavItem>;
   href?: string;
 }
 
@@ -188,15 +189,11 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Home',
-    href: '#',
+    href: '/',
   },
   {
-    label: 'Botanica',
-    href: '#',
-  },
-  {
-    label: 'Alpeggi',
-    href: '#',
+    label: 'Docs',
+    href: '/docs',
   },
 ];
 

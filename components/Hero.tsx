@@ -1,8 +1,11 @@
-import { Container, Heading, Text, useColorModeValue } from '@chakra-ui/react'
-import websiteConfig from '../lib/config/website'
+import { Container, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 
+export interface Hero {
+   headline: string,
+   subHeadline: string,
+}
 
-const Hero: React.FC = () => {
+const Hero: React.FC<Hero> = ({ headline, subHeadline }) => {
    return (
       <Container
          py={12}
@@ -22,7 +25,7 @@ const Hero: React.FC = () => {
                borderBottom="solid" 
                borderColor={useColorModeValue('green.500', 'green.600')}
             >
-               { websiteConfig.meta.title }
+               { headline }
             </Text>
          </Heading>
          <Text 
@@ -31,7 +34,7 @@ const Hero: React.FC = () => {
             textAlign="center" 
             color={useColorModeValue('gray.500', 'gray.100')}
          >
-               { websiteConfig.meta.subTitle }
+               { subHeadline }
          </Text>
       </Container>
    )
