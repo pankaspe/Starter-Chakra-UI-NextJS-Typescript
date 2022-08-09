@@ -9,7 +9,6 @@ const Home: NextPage = () => {
   return (
     <MainLayout>
       <Seo
-        title="Home"
         description={websiteConfig.meta.subTitle}
       />
       <Hero 
