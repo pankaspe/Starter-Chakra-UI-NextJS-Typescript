@@ -13,7 +13,7 @@ const Docs: NextPage = () => {
       />
       <Hero 
          headline="Docs" 
-         subHeadline="Documentation for Anzasca template, core Serenity" 
+         subHeadline="Documentation for Anzasca template" 
       />
     </MainLayout>
   )

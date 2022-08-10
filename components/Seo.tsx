@@ -11,13 +11,14 @@ export interface Seo {
 const Seo: React.FC<Seo> = ({ title, description }) => {
 
   const path = useRouter().pathname;
+  
   return (
     <>
       <Head>
         <title>
           {path === "/" 
             ? websiteConfig.meta.title 
-            : `${websiteConfig.meta.title}  - ${title ? title : null}`
+            : `${websiteConfig.meta.title}  - ${title}`
           }
         </title>
         <meta name="description" content={description} />

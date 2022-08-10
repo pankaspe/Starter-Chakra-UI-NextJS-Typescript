@@ -1,4 +1,5 @@
 import { Container, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 
 export interface Hero {
    headline: string,
@@ -6,6 +7,9 @@ export interface Hero {
 }
 
 const Hero: React.FC<Hero> = ({ headline, subHeadline }) => {
+
+   const path = useRouter().pathname;
+
    return (
       <Container
          py={12}
@@ -14,7 +18,7 @@ const Hero: React.FC<Hero> = ({ headline, subHeadline }) => {
       >
          <Heading 
             as="h1" 
-            size='4xl' 
+            size={path === "/" ? "4xl" : "2xl"}
             noOfLines={1} 
             fontWeight={600} 
             pb={6} 
