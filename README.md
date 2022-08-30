@@ -8,11 +8,14 @@ This is an [Next.js](https://nextjs.org/) project bootstrapped with [`create-nex
 ![Screenshot](screenshot.png)
 
 # Install
-`git clone https://github.com/pankaspe/Starter-Chakra-UI-NextJS-Typescript.git`
-now cd into the new created directory:
-`cd "Starter-Chakra-UI-NextJS-Typescript"`
-and run:
-`yarn install`
-after finish that run:
-`yarn dev`
-and point your browser to `localhost:3000`
+First, clone the repository:
+```git clone https://github.com/pankaspe/Starter-Chakra-UI-NextJS-Typescript.git```
+
+now enter the newly created directory
+```cd "Starter-Chakra-UI-NextJS-Typescript"```
+
+and then
+```yarn install```
+
+now you can run the Next server and point your browser to `localhost:3000`
+```yarn dev```
