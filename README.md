@@ -6,3 +6,13 @@ This is an [Next.js](https://nextjs.org/) project bootstrapped with [`create-nex
 - `Seo` component
 
 ![Screenshot](screenshot.png)
+
+# Install
+`git clone https://github.com/pankaspe/Starter-Chakra-UI-NextJS-Typescript.git`
+now cd into the new created directory:
+`cd "Starter-Chakra-UI-NextJS-Typescript"`
+and run:
+`yarn install`
+after finish that run:
+`yarn dev`
+and point your browser to `localhost:3000`
