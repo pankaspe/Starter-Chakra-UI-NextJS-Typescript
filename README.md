@@ -1,4 +1,4 @@
-This is an [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) `Typescript` and [Chakra UI](https://chakra-ui.com) implementation.
+Anzasca is the template used for [anzasca.it](https://anzasca.it) project developed and maintained by me, you can use this skeleton freely for your projects. Based on [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) `Typescript` and [Chakra UI](https://chakra-ui.com) implementation.
 
 ![Screenshot](screenshot.png)
 
